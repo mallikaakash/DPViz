@@ -100,9 +100,10 @@ const CoinChange = () => {
             Problem Statement
           </h2>
           <p className="mb-4 text-lg leading-relaxed text-gray-700">
-            Imagine you're a robot with a coin dispenser, tasked with giving out change. 
-            Your mission: Find the minimum number of coins needed to make up a specific amount, 
-            given a set of coin denominations. If it's impossible, you must alert the humans!
+          Imagine you&apos;re a robot with a coin dispenser, tasked with giving out change. 
+  Your mission: Find the minimum number of coins needed to make up a specific amount, 
+  given a set of coin denominations. If it&apos;s impossible, you must alert the humans!
+
           </p>
         </motion.section>
 
@@ -120,10 +121,10 @@ const CoinChange = () => {
             Solution Approach
           </h2>
           <p className="mb-4 text-lg leading-relaxed text-gray-700">
-            We'll use the power of dynamic programming! We'll create a magic array where each 
-            position represents the minimum coins needed for that amount. We start small and 
-            build our way up, considering each coin type at every step. It's like solving a 
-            puzzle, piece by piece!
+          We&apos;ll use the power of dynamic programming! We&apos;ll create a magic array where each 
+  position represents the minimum coins needed for that amount. We start small and 
+  build our way up, considering each coin type at every step. It&apos;s like solving a 
+  puzzle, piece by piece!
           </p>
         </motion.section>
 
