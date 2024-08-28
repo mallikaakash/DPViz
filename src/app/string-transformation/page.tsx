@@ -118,9 +118,9 @@ const EditDistance = () => {
               Problem Statement
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              Imagine you're a text editor with magical powers. Your task is to transform one word 
+              Imagine you&apos;re a text editor with magical powers. Your task is to transform one word 
               into another using the minimum number of operations. You can insert, delete, or 
-              replace a character. How many operations will it take? Let's find out!
+              replace a character. How many operations will it take? Let&apos;s find out!
             </p>
           </motion.section>
 
@@ -138,9 +138,9 @@ const EditDistance = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this puzzle! We'll create a table where each 
+              We&apos;ll use dynamic programming to solve this puzzle! We&apos;ll create a table where each 
               cell represents the minimum operations needed to transform a prefix of one word into 
-              a prefix of the other. We'll fill this table step by step, considering all possible 
+              a prefix of the other. We&apos;ll fill this table step by step, considering all possible 
               operations at each stage.
             </p>
           </motion.section>
@@ -226,7 +226,7 @@ const EditDistance = () => {
               Final Result
             </h2>
             <p className="text-xl text-gray-700">
-              The minimum number of operations needed to transform "{word1}" into "{word2}" is:{' '}
+              The minimum number of operations needed to transform &quot;{word1}&quot; into &quot;{word2}&quot; is:{' '}
               <motion.strong 
                 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600 font-bold"
                 initial={{ scale: 0.5, opacity: 0 }}

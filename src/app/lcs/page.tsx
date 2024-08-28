@@ -121,9 +121,9 @@ const LCS = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this efficiently. We'll create a 2D table where 
+              We&apos;ll use dynamic programming to solve this efficiently. We&apos;ll create a 2D table where 
               cell [i][j] represents the length of LCS of the first i characters of str1 and first j 
-              characters of str2. We'll build this table step by step, comparing characters and using 
+              characters of str2. We&apos;ll build this table step by step, comparing characters and using 
               previously computed results.
             </p>
           </motion.section>

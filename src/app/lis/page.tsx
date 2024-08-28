@@ -104,7 +104,7 @@ const LIS = () => {
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
               Given an unsorted array of integers, find the length of the longest increasing subsequence (LIS). 
               An increasing subsequence is a sequence of elements where each element is strictly greater than 
-              the previous one, but they don't need to be adjacent in the original array.
+              the previous one, but they don&apos;t need to be adjacent in the original array.
             </p>
           </motion.section>
 
@@ -122,8 +122,8 @@ const LIS = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this efficiently. We'll create an array where each element 
-              represents the length of the LIS ending at that index. We'll build this array by comparing each 
+              We&apos;ll use dynamic programming to solve this efficiently. We&apos;ll create an array where each element 
+              represents the length of the LIS ending at that index. We&apos;ll build this array by comparing each 
               element with all previous elements, updating the LIS length when we find a smaller element that 
               can be part of the increasing subsequence.
             </p>

@@ -108,10 +108,8 @@ const Knapsack = () => {
               Problem Statement
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              Imagine you're a thief with a knapsack that can hold a limited weight. 
-              You're presented with various items, each with its own weight and value. 
-              Your goal is to fill your knapsack with items that maximize the total value 
-              without exceeding the weight limit.
+            Imagine you&apos;re a clever thief with a knapsack. You&apos;ve broken into a store with various items, each with its own weight and value. Your goal is to fill your knapsack with the most valuable combination of items without exceeding its weight capacity. Choose wisely!
+
             </p>
           </motion.section>
 
@@ -129,9 +127,9 @@ const Knapsack = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this problem. We'll create a 2D array 
+              We&apos;ll use dynamic programming to solve this problem. We&apos;ll create a 2D array 
               where each cell [i][w] represents the maximum value we can achieve with the 
-              first i items and a knapsack capacity of w. We'll build this table step by step, 
+              first i items and a knapsack capacity of w. We&apos;ll build this table step by step, 
               considering each item and each possible capacity.
             </p>
           </motion.section>

@@ -113,9 +113,7 @@ const Fibonacci = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this efficiently. We'll start with the base cases (F(0) = 0 and F(1) = 1) 
-              and then build up to our target number, storing each calculated Fibonacci number along the way. 
-              This way, we avoid redundant calculations and achieve a linear time complexity.
+            We&apos;ll use dynamic programming to build our sequence step by step. We&apos;ll start with the base cases and then use the magic formula: F(n) = F(n-1) + F(n-2). It&apos;s like climbing a staircase, where each step depends on the two before it!
             </p>
           </motion.section>
 

@@ -123,8 +123,8 @@ const MatrixChain = () => {
               Solution Approach
             </h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              We'll use dynamic programming to solve this problem. We'll create a table where m[i,j] represents 
-              the minimum number of scalar multiplications needed to compute the matrix A[i]A[i+1]...A[j]. We'll 
+              We&apos;ll use dynamic programming to solve this problem. We&apos;ll create a table where m[i,j] represents 
+              the minimum number of scalar multiplications needed to compute the matrix A[i]A[i+1]...A[j]. We&apos;ll 
               fill this table using smaller subproblems and build our way up to the final solution.
             </p>
           </motion.section>
