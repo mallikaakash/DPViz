@@ -8,6 +8,7 @@ const dpProblems = [
   { id: 2, name: "Longest Common Subsequence", path: "/lcs" },
   { id: 3, name: "Knapsack Problem", path: "/knapsack" },
   { id: 4, name: "Longest Increasing Subsequence", path: "/lis" },
+  { id: 5, name: "Matrix Chain", path: "/matrix-chain" },
   { id: 6, name: "String Transformation", path: "/string-transformation" },
   { id: 7, name: "Coin Change", path: "/coin-change" },
 ];
