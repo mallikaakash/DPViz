@@ -5,3 +5,9 @@ I had initially built a basic prototype of this in June,2023, while I learning D
 
 Current Work:
 I am rebuilding this project from scratch, with a better UI and more problems, using NextJS and other visually appealing elements.
+
+The current problems included here are the Knasack, COin change, fibonacci, LIS, LCS, minimum steps to transform string and matrix chain multiplication.
+
+
+Contribute:
+It would be a great pleasure if you choose to contribute to this project. You can add more problems, improve the UI and make it more interactive. Some improvements would be to add the recursive tree visualizations or a more game-like interactive mode.
