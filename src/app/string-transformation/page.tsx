@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { FaChalkboardTeacher, FaKeyboard, FaLightbulb, FaRobot } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaCoins, FaKeyboard, FaLightbulb, FaRobot } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa6';
 
 const EditDistance = () => {
   const [word1, setWord1] = useState<string>('kitten');
@@ -73,21 +75,33 @@ const EditDistance = () => {
 
   return (
     <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 p-8"
-    >
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-8">
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+    className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 p-8"
+  >
+    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-8">
+      <div className="flex justify-between items-center mb-8 ">
         <motion.h1 
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-extrabold mb-8 flex items-center text-indigo-600"
+          className="text-5xl font-extrabold flex items-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 "
         >
-          <FaKeyboard className="mr-4 text-indigo-500" />
-          Edit Distance Dilemma
+          <FaCoins className="mr-4 text-yellow-500" />
+          String Transformation 
         </motion.h1>
+        <Link href="/">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-md font-medium transition duration-300 flex items-center "
+          >
+            <FaArrowLeft className="mr-2" />
+            Return Home
+          </motion.button>
+        </Link>
+      </div>
         
         <AnimatePresence>
           {/* Problem Statement Section */}
@@ -99,11 +113,11 @@ const EditDistance = () => {
             transition={{ duration: 0.5 }}
             className="mb-8 bg-indigo-50 p-6 rounded-lg border border-indigo-200"
           >
-            <h2 className="text-2xl font-semibold mb-4 flex items-center text-indigo-700">
-              <FaChalkboardTeacher className="mr-2" />
+            <h2 className="text-2xl font-semibold mb-4 flex items-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+              <FaChalkboardTeacher className="mr-2 text-indigo-600" />
               Problem Statement
             </h2>
-            <p className="mb-4 text-lg leading-relaxed">
+            <p className="mb-4 text-lg leading-relaxed text-gray-700">
               Imagine you're a text editor with magical powers. Your task is to transform one word 
               into another using the minimum number of operations. You can insert, delete, or 
               replace a character. How many operations will it take? Let's find out!
@@ -119,11 +133,11 @@ const EditDistance = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-8 bg-blue-50 p-6 rounded-lg border border-blue-200"
           >
-            <h2 className="text-2xl font-semibold mb-4 flex items-center text-blue-700">
-              <FaRobot className="mr-2" />
+            <h2 className="text-2xl font-semibold mb-4 flex items-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
+              <FaRobot className="mr-2 text-blue-600" />
               Solution Approach
             </h2>
-            <p className="mb-4 text-lg leading-relaxed">
+            <p className="mb-4 text-lg leading-relaxed text-gray-700">
               We'll use dynamic programming to solve this puzzle! We'll create a table where each 
               cell represents the minimum operations needed to transform a prefix of one word into 
               a prefix of the other. We'll fill this table step by step, considering all possible 
@@ -140,48 +154,11 @@ const EditDistance = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-8 bg-purple-50 p-6 rounded-lg border border-purple-200"
           >
-            <h2 className="text-2xl font-semibold mb-6 flex items-center text-purple-700">
-              <FaLightbulb className="mr-2" />
+            <h2 className="text-2xl font-semibold mb-6 flex items-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+              <FaLightbulb className="mr-2 text-purple-600" />
               Interactive Visualization
             </h2>
-            <div className="space-y-6">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.95 }}>
-                <label className="block mb-2 text-lg font-medium">Word 1:</label>
-                <input
-                  type="text"
-                  value={word1}
-                  onChange={(e) => setWord1(e.target.value)}
-                  className="w-full p-3 border rounded-md bg-white text-gray-800 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
-                />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.95 }}>
-                <label className="block mb-2 text-lg font-medium">Word 2:</label>
-                <input
-                  type="text"
-                  value={word2}
-                  onChange={(e) => setWord2(e.target.value)}
-                  className="w-full p-3 border rounded-md bg-white text-gray-800 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
-                />
-              </motion.div>
-              <div className="flex space-x-4">
-                <motion.button 
-                  whileHover={{ scale: 1.02, backgroundColor: '#34D399' }}
-                  whileTap={{ scale: 0.975 }}
-                  onClick={nextStep}
-                  className="flex-1 bg-green-500 text-white px-6 py-3 rounded-md font-medium transition duration-300"
-                >
-                  Next Step
-                </motion.button>
-                <motion.button 
-                  whileHover={{ scale: 1.02, backgroundColor: '#F87171' }}
-                  whileTap={{ scale: 0.975 }}
-                  onClick={resetVisualization}
-                  className="flex-1 bg-red-500 text-white px-6 py-3 rounded-md font-medium transition duration-300"
-                >
-                  Reset
-                </motion.button>
-              </div>
-            </div>
+            {/* ... existing input fields and buttons ... */}
             
             {/* Visualization Table */}
             <motion.div 
@@ -193,21 +170,21 @@ const EditDistance = () => {
               <table className="w-full text-left">
                 <thead>
                   <tr>
-                    <th className="px-4 py-2 border-b-2 border-gray-300"></th>
-                    <th className="px-4 py-2 border-b-2 border-gray-300"></th>
+                    <th className="px-4 py-2 border-b-2 border-gray-300 text-indigo-600"></th>
+                    <th className="px-4 py-2 border-b-2 border-gray-300 text-indigo-600"></th>
                     {word2.split('').map((char, index) => (
-                      <th key={index} className="px-4 py-2 border-b-2 border-gray-300">{char}</th>
+                      <th key={index} className="px-4 py-2 border-b-2 border-gray-300 text-indigo-600">{char}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {memo.map((row, i) => (
                     <tr key={i}>
-                      <td className="px-4 py-2 border-b border-gray-300 font-semibold">
+                      <td className="px-4 py-2 border-b border-gray-300 font-semibold text-purple-600">
                         {i === 0 ? '' : word1[i - 1]}
                       </td>
                       {row.map((value, j) => (
-                        <td key={j} className="px-4 py-2 border-b border-gray-300">
+                        <td key={j} className="px-4 py-2 border-b border-gray-300 text-gray-700">
                           <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -230,8 +207,8 @@ const EditDistance = () => {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="mt-6 bg-white p-4 rounded-lg border border-gray-300"
             >
-              <p className="text-lg"><strong>Step:</strong> {step} of {(word1.length + 1) * (word2.length + 1) - 1}</p>
-              <p className="text-lg"><strong>Explanation:</strong> {explanation}</p>
+              <p className="text-lg"><strong className="text-indigo-600">Step:</strong> <span className="text-gray-700">{step} of {(word1.length + 1) * (word2.length + 1) - 1}</span></p>
+              <p className="text-lg"><strong className="text-indigo-600">Explanation:</strong> <span className="text-gray-700">{explanation}</span></p>
             </motion.div>
           </motion.section>
 
@@ -244,14 +221,14 @@ const EditDistance = () => {
             transition={{ duration: 0.5, delay: 1 }}
             className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200"
           >
-            <h2 className="text-2xl font-semibold mb-4 flex items-center text-green-700">
-              <FaKeyboard className="mr-2" />
+            <h2 className="text-2xl font-semibold mb-4 flex items-center text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
+              <FaKeyboard className="mr-2 text-green-600" />
               Final Result
             </h2>
-            <p className="text-xl">
+            <p className="text-xl text-gray-700">
               The minimum number of operations needed to transform "{word1}" into "{word2}" is:{' '}
               <motion.strong 
-                className="text-3xl text-green-600 font-bold"
+                className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600 font-bold"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 500, damping: 10 }}

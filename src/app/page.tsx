@@ -7,7 +7,7 @@ const dpProblems = [
   { id: 1, name: "Fibonacci Sequence", path: "/fibonacci" },
   { id: 2, name: "Longest Common Subsequence", path: "/lcs" },
   { id: 3, name: "Knapsack Problem", path: "/knapsack" },
-  { id: 6, name: "Edit Distance", path: "/edit-distance" },
+  { id: 6, name: "String Transformation", path: "/string-transformation" },
   { id: 7, name: "Coin Change", path: "/coin-change" },
 ];
 
